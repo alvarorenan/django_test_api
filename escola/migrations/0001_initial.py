@@ -7,28 +7,54 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Curso',
+            name="Curso",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('codigo', models.CharField(max_length=10)),
-                ('descricao', models.CharField(max_length=100)),
-                ('nivel', models.CharField(choices=[('B', 'Básico'), ('I', 'Intermediário'), ('A', 'Avançado')], default='B', max_length=1)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("codigo", models.CharField(max_length=10)),
+                ("descricao", models.CharField(max_length=100)),
+                (
+                    "nivel",
+                    models.CharField(
+                        choices=[
+                            ("B", "Básico"),
+                            ("I", "Intermediário"),
+                            ("A", "Avançado"),
+                        ],
+                        default="B",
+                        max_length=1,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Estudante',
+            name="Estudante",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nome', models.CharField(max_length=100)),
-                ('email', models.EmailField(max_length=30, unique=True)),
-                ('cpf', models.CharField(max_length=11, unique=True)),
-                ('data_nascimento', models.DateField()),
-                ('celular', models.CharField(max_length=14)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("nome", models.CharField(max_length=100)),
+                ("email", models.EmailField(max_length=30, unique=True)),
+                ("cpf", models.CharField(max_length=11, unique=True)),
+                ("data_nascimento", models.DateField()),
+                ("celular", models.CharField(max_length=14)),
             ],
         ),
     ]

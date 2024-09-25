@@ -7,13 +7,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('escola', '0004_matricula'),
+        ("escola", "0004_matricula"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='curso',
-            name='codigo',
-            field=models.CharField(max_length=10, unique=True, validators=[django.core.validators.MinLengthValidator(3)]),
+            model_name="curso",
+            name="codigo",
+            field=models.CharField(
+                max_length=10,
+                unique=True,
+                validators=[django.core.validators.MinLengthValidator(3)],
+            ),
         ),
     ]

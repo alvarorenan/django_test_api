@@ -2,10 +2,11 @@ import os
 import django
 import random
 
+from escola.models import Curso
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "setup.settings")
 django.setup()
 
-from escola.models import Curso
 
 dados = [
     ("CPOO1", "Curso de Python Orientação à Objetos 01"),

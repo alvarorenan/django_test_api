@@ -1,12 +1,12 @@
-import os, django
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "setup.settings")
-django.setup()
-
+import os
+import django
 from faker import Faker
 from validate_docbr import CPF
 import random
 from escola.models import Estudante
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "setup.settings")
+django.setup()
 
 
 def criando_pessoas(quantidade_de_pessoas):
